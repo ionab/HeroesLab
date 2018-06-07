@@ -58,7 +58,18 @@ describe('Hero', function(){
   })
 
   it("should be able to sort task by urgency", function(){
-
+    task1 = new Task(5, 5, "Cheese", false);
+    task2 = new Task(4, 4, "Cheese", false);
+    task3 = new Task(3, 3, "Cheese", false);
+    task4 = new Task(2, 2, "Cheese", false);
+    task5 = new Task(1, 1, "Cheese", false);
+    hero1.tasks.push(task1);
+    hero1.tasks.push(task2);
+    hero1.tasks.push(task3);
+    hero1.tasks.push(task4);
+    hero1.tasks.push(task5);
+    hero1.sortTasksByUrgency();
+    assert.strictEqual(hero1.tasks[0], task1)
   })
 
   it("should be able to sort task by reward", function(){
