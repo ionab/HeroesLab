@@ -33,7 +33,7 @@ describe('Hero', function(){
   it("should be able to eat food, and health value should go up by the replenishmentValue", function(){
     food = new Food("testFood", 5)
     hero1.eatFood(food)
-    assert.strictEqual(hero.health, 15)
+    assert.strictEqual(hero1.health, 15)
   })
 
   it("should increase health by 1.5 * value if the food is their favourite food", function(){

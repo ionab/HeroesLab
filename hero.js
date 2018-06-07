@@ -7,4 +7,8 @@ var Hero = function(name, health, food, talk){
   }
   this.tasks = [];
 }
+
+Hero.prototype.eatFood = function (food) {
+  this.health += food.replenishmentValue
+};
 module.exports = Hero;
