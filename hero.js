@@ -1,7 +1,7 @@
 var Hero = function(name, health, food, talk){
   this.name = name;
   this.health = health;
-  this.food = food;
+  this.favfood = food;
   this.talk = function(){
     return "My name is: " + this.name;
   }
@@ -9,6 +9,20 @@ var Hero = function(name, health, food, talk){
 }
 
 Hero.prototype.eatFood = function (food) {
-  this.health += food.replenishmentValue
+  if (food.name === this.favfood){
+    this.health += (food.replenishmentValue * 1.5);
+  }
+  else {
+    this.health += food.replenishmentValue;
+  }
 };
+
+Hero.prototype.sortTasksByDifficult = function () {
+  return this.tasks.sort(function(a,b){
+    return b.difficultyLevel - a.difficultyLevel;
+  })
+};
+
+
+
 module.exports = Hero;

@@ -5,15 +5,15 @@ describe ('Task', function(){
 var task1;
 
   beforeEach(function(){
-    task1 = new Task("High", "High", "testReward")
+    task1 = new Task(5, 5, "testReward")
   })
 
   it("should have a difficulty level", function(){
-    assert.strictEqual(task1.difficultyLevel, "High")
+    assert.strictEqual(task1.difficultyLevel, 5)
   });
 
   it("should have a urgency level", function(){
-    assert.strictEqual(task1.urgencyLevel, "High")
+    assert.strictEqual(task1.urgencyLevel, 5)
   })
 
   it("should have a reward", function(){
